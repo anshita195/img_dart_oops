@@ -4,8 +4,8 @@ class Permissions {
   int? all;
 
   Permissions() {
-    addUser = 1 << 0;
-    addChannel = 1 << 1;
-    all = (1 << 2) - 1;
+    addUser = 1 << 1;
+    addChannel = 1 << 2;
+    all = (1 << 3) - 1;
   }
 }
