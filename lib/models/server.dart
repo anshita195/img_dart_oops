@@ -192,7 +192,7 @@ class Server {
     Map<String, dynamic> userMap = server.users!;
     print("");
     for (var entry in userMap.entries) {
-      if ((entry.value & r.modUser != 0) || (entry.value & r.superUser != 0)) {
+      if ((entry.value & r.modUser! == r.modUser)) {
         print(entry.key);
       }
     }
