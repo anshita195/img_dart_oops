@@ -20,10 +20,10 @@ class Server {
     };
     // print(p.all);
     categories = {
-      'Admin': r.superUser!,
-      'modUsers': r.modUser!,
-      'General': r.baseUser!,
-      'null': r.baseUser!,
+      'Admin': r.superUsercat!,
+      'modUsers': r.modUsercat!,
+      'General': r.baseUsercat!,
+      'null': r.baseUsercat!,
     };
   }
 

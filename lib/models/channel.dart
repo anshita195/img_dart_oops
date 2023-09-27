@@ -36,9 +36,8 @@ class Channel {
   static Future<void> createChannel(String categoryName, Server server,
       int type, String channelCreator) async {
     Permissions p = Permissions();
-    if (server.users![channelCreator] & p.addChannel == 0) {
-      print(
-          "you do not have the right to add a channel, take help from a superUser!!");
+    if (server.users![channelCreator] & p.addChannel != p.addChannel) {
+      print("you do not have the right to add a channel!!");
       return;
     }
     stdout.write("Please enter the name of the channel : ");
@@ -134,16 +133,13 @@ class Channel {
   void printMessages() {
     List<dynamic>? messageJson = messages;
     int length = messageJson!.length;
-    int count = 0;
     print("");
 
-    for (int i = length - 1; count < 10 && i >= 0; i--) {
+    for (int i = 0; i <= length - 1; i++) {
       Map<String, dynamic> map = jsonDecode(messageJson[i]);
       stdout
           .write('${map['sender'].toString()} : ${map['message'].toString()}');
       print("");
-
-      count++;
     }
 
     print("");

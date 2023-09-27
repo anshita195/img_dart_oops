@@ -105,7 +105,7 @@ class dmMessage {
 
       if (receiverMsg!["sender"] == receiver &&
           receiverMsg["receiver"] == sender) {
-        print("                      ${receiverMsg["message"]}  :$receiver");
+        print(" $receiver : ${receiverMsg["message"]} ");
       } else if (receiverMsg['receiver'] == receiver &&
           receiverMsg["sender"] == sender &&
           receiver != sender) {
