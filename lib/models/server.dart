@@ -18,12 +18,12 @@ class Server {
     users = {
       creator: p.all!,
     };
-    // print(p.all);
+
     categories = {
-      'Admin': r.superUsercat!,
-      'modUsers': r.modUsercat!,
-      'General': r.baseUsercat!,
-      'null': r.baseUsercat!,
+      'Admin': r.superUser!,
+      'modUsers': r.modUser!,
+      'General': r.baseUser!,
+      'null': r.baseUser!,
     };
   }
 

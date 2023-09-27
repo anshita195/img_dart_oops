@@ -84,9 +84,7 @@ class User {
     await userDb.openDb();
 
     List<dynamic>? records = await userDb.storeDb(true);
-    // print(records);
     String? rec = await userDb.findDb(username);
-    // print(rec);
     if (rec == '') {
       print("username does NOT exist");
       return false;
